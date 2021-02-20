@@ -3,7 +3,7 @@ import numpy as np
 import scipy.sparse as sparse
 
 
-class SpectrumKernelIndexed:
+class SpectrumIndexedKernel:
  
     def __init__(self, k):
         self.k = k
@@ -73,7 +73,7 @@ class SpectrumKernelIndexed:
 
     def GramMatrix(self, Xtrain):
  
-        print("Compute Spectrum Kernel Train Preindexed with k=",self.k)
+        print("Compute Spectrum Indexed Kernel for XTrain with k=",self.k)
         start = time.time()
 
         self.SGramMatrix = self.SparseGramMatrix(Xtrain)
@@ -91,7 +91,7 @@ class SpectrumKernelIndexed:
 
     def compute_KTest(self, Xtrain, Xtest):
             
-        print("Called SpectrumKernelPreindexed.compute_K_test")
+        print("Compute Spectrum Indexed Kernel K(Xtest,Xtrain)")
         start = time.time()
 
         n_samples, n_features = Xtest.shape[0], Xtrain.shape[0]
