@@ -20,7 +20,7 @@ Xtr, Xte, Ytr, Yte = train_test_split(Xtrain0, Ytrain0, test_size=0.2)
 # Tuning Alpha for Xtrain0
 alphas = np.linspace(0.1,1,10); test_scores = []; train_scores = []
 for alpha in alphas:
-    svm = RegularizedSvm(kernel=MultipleSpectrumKernel(KList=range(1,11)),alpha=alpha) 
+    svm = RegularizedSvm(kernel=MultipleSpectrumIndexedKernel(KList=range(1,11)),alpha=alpha) 
     svm.fit(Xtr, Ytr)
     print("Alpha:", alpha)
     # For test
