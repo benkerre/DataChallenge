@@ -20,7 +20,7 @@ Xtr, Xte, Ytr, Yte = train_test_split(Xtrain1, Ytrain1, test_size=0.2)
 # Tuning
 klist = [1,2,3,4,5,6,7,8,9,10]; alpha = 0.1; train_scores = [], test_scores = []
 for i in range(1,11):
-    kernel = MultipleSpectrumKernel(KList=klist[:i])
+    kernel = MultipleSpectrumIndexedKernel(KList=klist[:i])
     svm = RegularizedSvm(kernel=kernel,alpha=alpha)
     svm.fit(Xtr, Ytr)
     print("klist:", klist[:i])
