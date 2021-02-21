@@ -19,3 +19,5 @@ python3 start.py
 ## Results
 
 Thanks to our implementation of the svm algorithm as well as to the different kernels to preprocess our data, we were able to answer the requested classification problem with a relatively high score of 71.066\% on the public Leader board. It is clear that this result can be improved by implementing other types of kernels, however, it requires computer resources large enough to be able to train the models for a long time without worrying about memory or blocking.
+
+![Screenshot](Images/LEADERBOARD.png)
