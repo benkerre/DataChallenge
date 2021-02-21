@@ -8,7 +8,7 @@ print("********* Training on the 3 learning sets *********\n")
 
 ################################################################################################################################################
 
-print(">> Read Train set n°0")
+print(">> Train SVM on Train set 0")
 
 Xtrain0 = np.loadtxt('./Data/Xtr0.csv', skiprows=1, usecols=(1,), dtype=str, delimiter=',').astype(str)
 Ytrain0 = np.loadtxt('./Data/Ytr0.csv', skiprows=1, usecols=(1,), dtype=str, delimiter=',').astype(int)
@@ -26,7 +26,7 @@ print("\n")
 
 ################################################################################################################################################
 
-print(">> Read Train set n°1")
+print(">> Train SVM on Train set 1")
 
 Xtrain1 = np.loadtxt('./Data/Xtr1.csv', skiprows=1, usecols=(1,), dtype=str, delimiter=',').astype(str)
 Ytrain1 = np.loadtxt('./Data/Ytr1.csv', skiprows=1, usecols=(1,), dtype=str, delimiter=',').astype(int)
@@ -44,7 +44,7 @@ print("\n")
 
 ################################################################################################################################################
 
-print(">> Read Train set n°2")
+print(">> Train SVM on Train set 2")
 
 Xtrain2 = np.loadtxt('./Data/Xtr2.csv', skiprows=1, usecols=(1,), dtype=str, delimiter=',').astype(str)
 Ytrain2 = np.loadtxt('./Data/Ytr2.csv', skiprows=1, usecols=(1,), dtype=str, delimiter=',').astype(int)
@@ -62,7 +62,7 @@ print("\n")
 
 ################################################################################################################################################
 
-print("********* Load Test sets and predict *********\n")
+print("********* Load Test sets and predict Ytest*********\n")
 
 Xtest0 = np.loadtxt('./Data/Xte0.csv', skiprows=1, usecols=(1,), dtype=str, delimiter=',').astype(str)
 Xtest1 = np.loadtxt('./Data/Xte1.csv', skiprows=1, usecols=(1,), dtype=str, delimiter=',').astype(str)
