@@ -4,6 +4,14 @@ The purpose of this Data challenge is to predict whether a DNA sequence of the v
 
 ## Execution
 
+---bash
+git clone git@github.com:benkerre/DataChallenge.git
+---
+
+---bash
+cd DataChallenge
+---
+
 ```bash
 python3 start.py
 ```
