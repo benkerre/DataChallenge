@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 #########################
 
 
-print("Load Dataset n°1 ")
+print("Load Dataset n°0 ")
 Xtrain0 = np.loadtxt('./Data/Xtr0.csv', skiprows=1, usecols=(1,), dtype=str, delimiter=',').astype(str)
 Ytrain0 = np.loadtxt('./Data/Ytr0.csv', skiprows=1, usecols=(1,), dtype=str, delimiter=',').astype(int)
 Ytrain0 = 2*Ytrain0-1
@@ -40,7 +40,7 @@ fig.suptitle('Train and Test accuracy = f(Alpha)')
 ax1.plot(alphas,train_scores)
 ax2.plot(alphas,test_scores)
 ax1.set_xlabel('Aplhas')
-ax1.set_ylabel('Test score')
+ax1.set_ylabel('Train score')
 ax1.set_title('Train accuracy = f(Alpha)')
 ax1.legend(["Best Alpha is:"+str(alphas[np.argmax(test_scores)])])
 ax2.set_xlabel('Aplhas')
