@@ -18,7 +18,7 @@ Ytrain2 = 2*Ytrain2-1
 Xtr, Xte, Ytr, Yte = train_test_split(Xtrain2, Ytrain2, test_size=0.2)
 
 # Tuning Alpha for Xtrain0
-alphas = np.linspace(0.1,1,10); test_scores = []
+alphas = np.linspace(0.1,1,10); test_scores = []; train_scores = []
 for alpha in alphas:
     svm = RegularizedSvm(kernel=MultipleSpectrumIndexedKernel(KList=range(1,11)),alpha=alpha) 
     svm.fit(Xtr, Ytr)
@@ -31,13 +31,14 @@ for alpha in alphas:
     
 # PLot 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 7))
-ax1.plot(alphas,test_scores)
-ax2.plot(alphas,train_score)
+fig.suptitle('Train and Test accuracy = f(Alpha)')
+ax1.plot(alphas,train_scores)
+ax2.plot(alphas,test_scores)
 ax1.set_xlabel('Aplhas')
-ax1.set_ylabel('Test score')
-ax1.set_title('TestScore = f(Alpha)')
+ax1.set_ylabel('Train score')
+ax1.set_title('Train accuracy = f(Alpha)')
 ax1.legend(["Best Alpha is:"+str(alphas[np.argmax(test_scores)])])
 ax2.set_xlabel('Aplhas')
-ax2.set_ylabel('Train score')
-ax2.set_title('TrainScore = f(Alpha)')
+ax2.set_ylabel('Test score')
+ax2.set_title('Test accuracy = f(Alpha)')
 ax2.legend(["Best Alpha is:"+str(alphas[np.argmax(train_score)])])
